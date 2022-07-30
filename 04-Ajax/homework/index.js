@@ -10,20 +10,29 @@ $('#boton').click(function () {
 });
 
 $('#search').click(function () {
-    let id = $("#input");
+    let id = $("#input").val();
     // console.log(id);
     // console.log(id[0]);
-    console.log(id[0].value);
+    //console.log(id[0].value);
 
-    $.get(`http://localhost:5000/amigos/${id[0].value}`, function (data) {
-        console.log(data);
-        $("#amigo").text(data.name); //agrega dta.name al contenido del #amigo
-        id[0].value = "";  // deja el input vacio
-        // var title = document.createElement('h3');
-        // title.textContent = data.name;
-        // $("body").append(title);
+    // $.get(`http://localhost:5000/amigos/${id[0].value}`, function (data) {
+    //     console.log(data);
+    //     $("#amigo").text(data.name); //agrega dta.name al contenido del #amigo
+    //     id[0].value = "";  // deja el input vacio
+    //     // var title = document.createElement('h3');
+    //     // title.textContent = data.name;
+    //     // $("body").append(title);
    
-    });
+    // });
+
+    $.get(`http://localhost:5000/amigos/${id}`)
+    .then( function(data) {
+        $("#amigo").text(data.name);
+        id = "";
+    } )
+    .catch( function() {
+        $("#amigo").text('No existe el amigo');
+    } );
 });
 
 $('#delete').click(function () {
