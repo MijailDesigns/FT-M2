@@ -50,3 +50,22 @@ $('#delete').click(function () {
         }
       });
 });
+
+
+$('#nuevo').click(() => {
+    let nombre = $("#inputNuevo").val();
+    let edad = $("#inputNuevo2").val();
+    let mail = $("#inputNuevo3").val();
+    let friend = {name:nombre, age:edad, email:mail};
+
+
+    $.ajax({
+        url: 'http://localhost:5000/amigos/',
+        type: 'POST',
+        data: JSON.stringify(friend),
+        contentType: "application/json",
+        success: () => {
+          $("#successNuevo").text(`Se agrego a ${nombre}`);
+        }
+      });
+});

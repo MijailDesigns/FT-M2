@@ -1,3 +1,22 @@
 #logoHenry {
   margin-right: 20px;
 }
+
+.navdiv{
+  margin: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.navdiv h4{
+  color: white;
+}
+
+.Nav{
+  background-color: gray;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
