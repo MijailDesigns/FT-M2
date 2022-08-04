@@ -4,7 +4,7 @@ import Nav from './components/Nav';
 import Cards from './components/Cards'
 
 export default function App() {
-  const [cities, setCities] = useState([]);
+  const [cities, setCities] = useState([]);  //coloca React.useState en el cp, lo sugiere martina
 
 
   function onSearch(ciudad) {
