@@ -41,7 +41,7 @@ function Home() {
 const Root = (
   <Router>
     <NavBar />
-    <Switch>
+    {/* <Switch> */}
       <Route path="/home">
         <Home />
       </Route>
@@ -63,25 +63,25 @@ const Root = (
       <Route strict path="/strict/">
         <h2>Strict</h2>
       </Route>
-      {/* <Route strict path="/strict">
+      <Route strict path="/strict">
         <h2>Strict</h2>
-      </Route> */}
-      {/* <Route exact strict path="/strict">
+      </Route>
+      <Route exact strict path="/strict">
         <h2>Strict</h2>
-      </Route> */}
-      {/* <Route sensitive path="/sensitive">
+      </Route> 
+      <Route sensitive path="/sensitive">
         <h2>Sensitive</h2>
       </Route>
       <Route sensitive path="/Sensitive">
         <h2>Sensitive Mayus</h2>
-      </Route> */}
+      </Route> 
       <Route path="/sensitive">
         <h2>No Sensitive</h2>
       </Route>
       <Route path="/">
         <h2>Default</h2>
       </Route>
-    </Switch>
+    {/* </Switch> */}
   </Router>
 );
 

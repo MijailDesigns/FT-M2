@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function Params(props) {
+  console.log(props)
   return (
     <div>
       <h2>First Parameter: {props.match.params.firstParam}</h2>

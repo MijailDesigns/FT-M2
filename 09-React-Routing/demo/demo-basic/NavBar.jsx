@@ -9,7 +9,7 @@ export default function NavBar() {
       <br></br>
       <Link to="/about">About</Link>
       <br></br>
-      <Link to="/abouttt">Abouttt</Link>
+      <NavLink to="/abouttt" activeClassName='selected'>Abouttt</NavLink>
       <br></br>
       <Link to="/aboutttttt">Aboutttttt</Link>
       <br></br>
