@@ -42,10 +42,11 @@ export default function  Form() {
     }));
   }
 
+  
   //para validar que no estamos enviando el form con errores o vacio
   function validateSubmit(e) {
     e.preventDefault(); // evita que se envie por defecto
-    if (errors.username || errors.password) {
+    if (errors.username || errors.password || input.username === '' || input.password === '') {
       console.log('Hay campos por completar');
     }else{
       console.log('Form enviado');
@@ -87,6 +88,7 @@ export default function  Form() {
           </div>
           
           <input type="submit" value="Submit"/>
+          {/* para que se muestre lo que quieres recuerda que los cambios en las variables no se hace que se renderice de nuevo, solo se renderiza cuando cambia el props o el state */}
         </form>
       </div>
   )

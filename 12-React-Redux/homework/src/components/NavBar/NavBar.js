@@ -14,6 +14,8 @@ export default function NavBar() {
                 <ul className="list">
                     <li className="list-item">
                         <NavLink exact to="/" >Home</NavLink>
+                    </li>
+                    <li className="list-item">
                         <NavLink to="/favs" >Favoritas</NavLink>
                     </li>
                 </ul>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AppHooks from './AppHooks';
 import AppClass from './AppClass';
+import Counter from './UseReducer';
 
 export default function App() {
   const [useHook, setUseHook] = useState(true);
@@ -10,6 +11,9 @@ export default function App() {
 
   return (
     <>
+      <div>
+        <Counter />
+      </div>
       <div>
         <h3>Henry Hook Demo</h3>
         <button onClick={() => setUseHook(prev => !prev)}>
